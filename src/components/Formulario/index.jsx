@@ -4,17 +4,8 @@ import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = ({aoColaboradorCadastrado})=>{
-  const times = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão'
-  ]
-
+const Formulario = ({aoColaboradorCadastrado, times})=>{
+  
   const aoSalvar = (evento)=>{
     evento.preventDefault()
     console.log(nome, cargo, imagem,time)
@@ -24,6 +15,10 @@ const Formulario = ({aoColaboradorCadastrado})=>{
       imagem,
       time
     })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
   }
 
   const [nome, setNome] = useState('')
